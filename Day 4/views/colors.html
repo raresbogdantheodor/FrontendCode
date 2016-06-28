@@ -1,0 +1,30 @@
+
+
+
+<div ng-controller="ColorsController">
+    <label>
+    <select ng-model="myColor" ng-options="color.text group by color.text for color in colors"></select>
+    <p>Color: <span>{{myColor}}</span>!</p>
+    </label>
+</div>
+
+<input type="checkbox" ng-model="selected"
+       ng-change="changeColor()" />
+
+<input type="text" ng-model="id1"/>
+<input type="text" ng-model="id2"/>
+
+<div ng-repeat="color in colors">
+    {{color}}
+</div>
+
+<div ng-repeat="color in colors | orderBy: 'id1' track by color.class">
+    {{color}}
+</div>
+
+<div ng-repeat="color in colors | orderBy: 'id2' track by color.class">
+    {{color}}
+</div>
+
+
+

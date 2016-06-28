@@ -1,0 +1,17 @@
+
+
+<ng-form name="myForm" class="my-form">
+    Text: <input type="text" name="input" ng-model="text" required>
+    Class: <input type="text" ng-model="class" required>
+    Type: <input type="text" ng-model="type" required>
+    <input type="button" ng-click="validate()" value="Validate" />
+    <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+    text = {{colors.text}}<br>
+    class = {{colors.class}}<br>
+    type = {{colors.type}}<br>
+    myForm.input.$valid = {{myForm.input.$valid}}<br>
+    myForm.input.$error = {{myForm.input.$error}}<br>
+    myForm.$valid = {{myForm.$valid}}<br>
+    myForm.$error.required = {{!!myForm.$error.required}}<br>
+</ng-form>
+
